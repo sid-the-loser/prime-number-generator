@@ -51,7 +51,7 @@ def backup():
         f = open(filename, "wb")
         say("Cleared past backup data...")
         dump(primes.copy(), f)
-        say("Dumped data to temporary storage...")
+        say("Dumped data to permanent storage buffer...")
         f.close()
         say(f"Saved to {filename} file!")
         saving = False
