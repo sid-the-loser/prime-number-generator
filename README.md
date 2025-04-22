@@ -1,10 +1,9 @@
 # prime-number-generator
-This project was made by SIdTheLoser and is still being maintained by him (what a CHAD!).
+
+This project was made by SIdTheLoser.
+
+> Latest version (VER 9) hasn't been made into a build.
+
 ## How will this be useful to me?
-You can use the "primes.dat" and pickle library to get a list of prime numbers which you can use to make appropriate programs with 
-(I don't care how you will use my program).
-## How do I help?
-Download the "main.py" file and the latest "primes.dat" file provided and put them both in one directory, go to town generating prime numbers!
-## How do I help optimise the code?
-Download the "main.py" file. If you want me to upload your code to this repo, 
-let me know if you made any improvements by communicating with me by contacts provided in my profile.
+
+You can use the "primes.dat" and pickle library to get a list of prime numbers I pre-generated for you or download and run the code for yourself! I really don't know why you'd need this programm, but, who cares! (not me)
