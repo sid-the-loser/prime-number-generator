@@ -43,7 +43,7 @@ running = True
 def say(text:str, end="\n"):
     print(f"{name}<< {text}", end=end)
 
-def backup():
+def backup() -> bool:
     global filename, primes, saving
     if not saving:
         saving = True
@@ -55,8 +55,10 @@ def backup():
         f.close()
         say(f"Saved to {filename} file!")
         saving = False
+        return True
     else:
         say("Prime numbers are being backed up! Please wait!")
+        return False
 
 def secondary():
     global running, name, auto_save, help_text, biggest, length, new_length, n, saving, pause
@@ -74,8 +76,8 @@ def secondary():
             except TypeError:
                 pass
         elif a == "x":
-            backup()
-            running = False
+            if backup():
+                running = False
         elif a == "cls":
             run("cls")
         elif a == "clear":
@@ -97,8 +99,8 @@ def secondary():
                 say(f"Opening {filename}.txt...")
                 f = open(filename+".txt", "w")
                 say(f"Writing data to {filename}.txt...")
-                for i in data:
-                    f.write(str(i)+"\n")
+                f.write(str(data).replace("[", "").replace("]", "").replace(",",
+                                                                            "\n").replace(" ", ""))
                 say(f"Flushing data to {filename}.txt")
                 f.close()
                 say("Export successful!")

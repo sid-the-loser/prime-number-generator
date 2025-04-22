@@ -1,6 +1,2 @@
-from pickle import dump
-
-f = open("primes.txt", "r"); primes = f.read().split("\n"); del primes[-1];
-for i in range(len(primes)):
-    primes[i] = int(primes[i])
-f = open("primes.dat", "wb"); dump(primes, f); f.close()
+# yeah, i wrote it in one line 😆
+from pickle import dump;primes = open("primes.txt", "r").read().split("\n"); del primes[-1];primes = [int(primes[i]) for i in range(len(primes))];f = open("primes.dat", "wb"); dump(primes, f); f.close()
